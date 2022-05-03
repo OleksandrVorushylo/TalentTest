@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #161626;
+  --color-main: #3cc5fb;
+
+  --color-black: #161626;
+  --color-cyan: #24ebcd;
+  --color-turquoise: #42d6c5;
+  --color-green: #24eb8b;
+  --color-blue: #3cc5fb;
+  --color-purple: #6256ae;
+  --color-lightgrey: #f4f4f4;
+  --color-white: #fff;
+  --gradient-green-cyan: linear-gradient(to right, $color-green 0%, $color-cyan 100%);
+  --gradient-cyan-purple: linear-gradient(to right, $color-cyan 0%, $color-purple 100%);
+  --gradient-blue-cyan: linear-gradient(to right, $color-blue 0%, $color-cyan 100%);
+  --gradient-blue-purple: linear-gradient(to right, $color-blue 0%, $color-purple 100%);
+
+  --font-main: 'Poppins';
+
+  --left-position-span: 0;
+  --width-span: 0;
+  --span-transition: opacity 0.5s ease, visibility 0s 0.5s;
+
+
+  --span-transition-mouse-enter: opacity 0.5s ease, visibility 0s 0.5s;
+  --span-transition-mouse-leave: opacity 0.5s ease, visibility 0s 0s;
+  --span-transition-mouse-moving: 0.5s cubic-bezier(0.75, 0, 0, 1);
+}
+
+

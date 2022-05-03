@@ -1,0 +1,90 @@
+@use "sass:math";
+
+body {
+    position: relative;
+    min-width: 320px;
+    margin: auto;
+    background: var(--color-bg);
+    &.disabled {
+        overflow-y: scroll;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+// Для правильної роботи Swiper Safari 11.1
+.swiper-wrapper {
+    left: 0 !important;
+}
+
+#site {
+    position: relative;
+    overflow-x: hidden;
+}
+
+%default-transition {
+    transition: ease-in-out 0.25s;
+}
+
+// Styles for first section if it 100vh of viewport
+//.first-section {
+//    width: 100%;
+//
+//    .container {
+//        height: 100vh;
+//        margin: 0 auto;
+//
+//        max-width: 1400px;
+//        width: perc(1400);
+//        display: flex;
+//        align-items: center;
+//        justify-content: center;
+//    }
+//}
+
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px 0;
+    a {
+        font-family: var(--font-main);
+        color: var(--color-main);
+        line-height: 100%;
+        padding: 0 10px;
+        @include adaptive-value("font-size", 32px, 18px);
+
+        &:not(:last-child) {
+            @include adaptive-value("margin-right", 40px, 10px);
+        }
+    }
+
+    span {
+        position: absolute;
+        background: #515151;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+
+        height: 90%;
+
+        z-index: -1;
+        opacity: 0;
+
+        left: var(--left-position-span);
+        width: var(--width-span);
+        transition: var(--span-transition);
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
